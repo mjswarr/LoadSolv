@@ -7,20 +7,12 @@ This software's original strucutre and scripts were developed at the University 
 
 ## General Structure
 To use this code you need the following ingredients:
-
-        - Design Matrix (Jacobian): Dataset describing the predicted horizontal and vertical displacement response of each GNSS station within a study area (e.g., Western US) to a unit load in each 
-          pixel of your model domain (e.g., 0.25 degree pixel grid in the Western US). The design matrix can be computed using common semi-analytical models that simualted the solid Earth's elastic 
-          deformation response (e.g., LoadDef, SPOTL). However, design matrices may also be computed using fully-numerical models of Earth deformation (e.g., PyLith, Citcom, Abaqus).
-          
-        - GNSS Displacement Data: A file (or series of files) that contain the displacement of GNSS stations on a given epoch (e.g., January 2006). 
-          This file should include the following for estimates of hydrologic loading:
-          Station Name, Latitude, Longitude, E Displacement [mm], N Displacement [mm], V Displacement [mm], E Sigma [mm], N Sigma [mm], V Sigma [mm]
-          For an ocean tidal loading, the following information is needed:
-          Station Name, Latitude, Longitude, E Amplitude [mm], E Phase [deg], N Amplitude [mm], N Phase [mm], V Amplitude [mm], V Phase [mm] E Amplitude Sigma [mm], E Phase Sigma [deg]
-          N Amplitude Sigma [mm], N Phase Sigma [deg], V Amplitude Sigma [mm], V Phase Sigma [deg]
+- Design Matrix (Jacobian): Dataset describing the predicted horizontal and vertical displacement response of each GNSS station within a study area (e.g., Western US) to a unit load in each pixel of your model domain (e.g., 0.25 degree pixel grid in the Western US). The design matrix can be computed using common semi-analytical models that simualted the solid Earth's elastic deformation response (e.g., LoadDef, SPOTL). However, design matrices may also be computed using fully-numerical models of Earth deformation (e.g., PyLith, Citcom, Abaqus).
+- GNSS Displacement Data: A file (or series of files) that contain the displacement of GNSS stations on a given epoch (e.g., January 2006). This file should include the following for estimates of hydrologic loading: Station Name, Latitude, Longitude, E Displacement [mm], N Displacement [mm], V Displacement [mm], E Sigma [mm], N Sigma [mm], V Sigma [mm]
+- For an ocean tidal loading, the following information is needed: Station Name, Latitude, Longitude, E Amplitude [mm], E Phase [deg], N Amplitude [mm], N Phase [mm], V Amplitude [mm], V Phase [mm] E Amplitude Sigma [mm], E Phase Sigma [deg], N Amplitude Sigma [mm], N Phase Sigma [deg], V Amplitude Sigma [mm], V Phase Sigma [deg]
 
 Outputs:
-        - Gridded estimates of water storage and associated formal uncertainties for each epoch in which data files were provided.
+- Gridded estimates of water storage and associated formal uncertainties for each epoch in which data files were provided.
 
 ## Requirements
 This code base relies upon common Python packages such as: NumPy, SciPy, Pandas, datetime, Netcdf4, mpi4py, sys, os, matplotlib

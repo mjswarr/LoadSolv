@@ -1,6 +1,6 @@
 # LoadSolv
 
-A Python based software used to invert GNSS observations of surface displacement to infer changes in water storage.
+A Python based software used to invert GNSS observations of surface displacement to infer changes in surface loads near Earth's surface. For example, this software may be used to invert GNSS observations of hydrology-induced surface displacement to estimate changes in water storage. You may also invert observations of ocean tidal loading (OTL) induced deformation to estiamte tidal amplitude and phase for select tidal phases on a spatial grid.
 
 ## History
 This software's original strucutre and scripts were developed at the University of Montana by Dr. Hilary R. Martens in 2021 for use with the elastic deformation modeling software LoadDef. Refinement and alterations of this version of the software were made by Dr. Matthew J Swarr over the course of his PhD at the University of Montana. The software has been archived in various open-source repositories associated with publications over the years, but we have it here to serve as a 'living' version that can be worked on as times goes on.
@@ -10,8 +10,12 @@ To use this code you need the following ingredients:
         - Design Matrix (Jacobian): Dataset describing the predicted horizontal and vertical displacement response of each GNSS station within a study area (e.g., Western US) to a unit load in each 
           pixel of your model domain (e.g., 0.25 degree pixel grid in the Western US). The design matrix can be computed using common semi-analytical models that simualted the solid Earth's elastic 
           deformation response (e.g., LoadDef, SPOTL). However, design matrices may also be computed using fully-numerical models of Earth deformation (e.g., PyLith, Citcom, Abaqus).
-        - GNSS Displacement Data: A file (or series of files) that contain the displacement of GNSS stations on a given epoch (e.g., January 2006). This file should include the following:
+        - GNSS Displacement Data: A file (or series of files) that contain the displacement of GNSS stations on a given epoch (e.g., January 2006). 
+          This file should include the following for estimates of hydrologic loading:
           Station Name, Latitude, Longitude, E Displacement [mm], N Displacement [mm], V Displacement [mm], E Sigma [mm], N Sigma [mm], V Sigma [mm]
+          For an ocean tidal loading, the following information is needed:
+          Station Name, Latitude, Longitude, E Amplitude [mm], E Phase [deg], N Amplitude [mm], N Phase [mm], V Amplitude [mm], V Phase [mm] E Amplitude Sigma [mm], E Phase Sigma [deg]
+          N Amplitude Sigma [mm], N Phase Sigma [deg], V Amplitude Sigma [mm], V Phase Sigma [deg]
 
 Outputs:
         - Gridded estimates of water storage and associated formal uncertainties for each epoch in which data files were provided.

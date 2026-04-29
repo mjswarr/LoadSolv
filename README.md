@@ -1,6 +1,6 @@
 # LoadSolv
 
-A Python based software used to invert GNSS observations of surface displacement to infer changes in surface loads near Earth's surface. For example, this software may be used to invert GNSS observations of hydrology-induced surface displacement to estimate changes in water storage. You may also invert observations of ocean tidal loading (OTL) induced deformation to estiamte tidal amplitude and phase for select tidal phases on a spatial grid.
+A Python based software used to invert GNSS observations of surface displacement to infer changes in surface loads near Earth's surface. For example, this software may be used to invert GNSS observations of hydrology-induced surface displacement to estimate changes in water storage. You may also invert observations of ocean tidal loading (OTL) induced deformation to estimate tidal amplitude and phase for select tidal phases on a spatial grid.
 
 ## History
 This software's original strucutre and scripts were developed at the University of Montana by Dr. Hilary R. Martens in 2021 for use with the elastic deformation modeling software LoadDef. Refinement and alterations of this version of the software were made by Dr. Matthew J Swarr over the course of his PhD at the University of Montana. The software has been archived in various open-source repositories associated with publications over the years, but we have it here to serve as a 'living' version that can be worked on as times goes on.

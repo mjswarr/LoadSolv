@@ -304,8 +304,5 @@ def main(datafile,fid,apriori_file,design_matrix,sta_ids,sta_comp_ids,sta_comp_l
     plt.scatter(load_cell_lon,load_cell_lat,c=mvec)
     plt.show()
 
-    plt.scatter(load_cell_lon,load_cell_lat,c=confidence_intervals)
-    plt.show()
-
     # Return Model Vector
     return mvec,confidence_intervals

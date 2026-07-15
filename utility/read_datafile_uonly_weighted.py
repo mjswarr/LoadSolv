@@ -1,22 +1,22 @@
 # *********************************************************************
 # FUNCTION TO READ IN OBSERVATIONS of SURFACE DISPLACEMENT
 #
-# Copyright (c) 2014-2019: HILARY R. MARTENS, LUIS RIVERA, MARK SIMONS
+# Copyright (c) 2026
 #
-# This file is part of LoadDef.
+# This file is part of LoadSolv.
 #
-#    LoadDef is free software: you can redistribute it and/or modify
+#    LoadSolv is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
 #    any later version.
 #
-#    LoadDef is distributed in the hope that it will be useful,
+#    LoadSolv is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU General Public License for more details.
 #
 #    You should have received a copy of the GNU General Public License
-#    along with LoadDef.  If not, see <https://www.gnu.org/licenses/>.
+#    along with LoadSolv.  If not, see <https://www.gnu.org/licenses/>.
 #
 # *********************************************************************
 

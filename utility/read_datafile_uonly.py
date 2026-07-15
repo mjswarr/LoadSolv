@@ -26,10 +26,10 @@ import sys
 def main(filename):
 
     # Read in station names
-    sta = np.loadtxt(filename,usecols=(0,),unpack=True,dtype='U')
+    sta = np.loadtxt(filename,skiprows=1,usecols=(0,),unpack=True,dtype='U')
    
     # Read in data
-    lat,lon,udisp = np.loadtxt(filename,usecols=(1,2,5),unpack=True)
+    lat,lon,udisp = np.loadtxt(filename,skiprows=1,usecols=(1,2,5),unpack=True)
  
     # Return Parameters
     return sta,lat,lon,udisp

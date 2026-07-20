@@ -38,7 +38,6 @@ import scipy as sc
 import datetime
 import netCDF4 
 from solv import load_inversion
-from utility import read_loadDesignMatrix
 
 # --------------- SPECIFY USER INPUTS --------------------- #
 

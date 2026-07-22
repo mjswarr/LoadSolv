@@ -75,7 +75,7 @@ def main(datafile,fid,apriori_file,design_matrix,sta_ids,sta_comp_ids,sta_comp_l
                 crow_data = data_idx[bb]
                 G[bb,:] = design_matrix[crow_dm+2,:] # up (note: it is assumed that the Jacobian was built for 3 components -- e,n,u; hence, the +2)
                 d[bb] = udisp[crow_data] # up
-                w[bb] = 1/usig[crow_data]**2 # up-sigma
+                w[bb] = 1/usig[crow_data] # up-sigma
             # Create Weighting Matrix and Weight the Design Matrix and Data Vector
             W = np.diag(w)
             A = G.copy()
@@ -98,9 +98,9 @@ def main(datafile,fid,apriori_file,design_matrix,sta_ids,sta_comp_ids,sta_comp_l
                 d[(bb*3)] = edisp[crow_data] - edisp[crow_data].mean() # east
                 d[(bb*3)+1] = ndisp[crow_data] - ndisp[crow_data].mean() # north
                 d[(bb*3)+2] = udisp[crow_data] # up
-                w[(bb*3)] = 1/esig[crow_data]**2 # east-sigma
-                w[(bb*3)+1] = 1/nsig[crow_data]**2 # north-sigma 
-                w[(bb*3)+2] = 1/usig[crow_data]**2 # up-sigma
+                w[(bb*3)] = 1/esig[crow_data] # east-sigma
+                w[(bb*3)+1] = 1/nsig[crow_data] # north-sigma 
+                w[(bb*3)+2] = 1/usig[crow_data] # up-sigma
             # Create Weighting Matrix and Weight the Design Matrix and Data Vector
             W = np.diag(w)
             A = G.copy()
